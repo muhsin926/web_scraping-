@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            margin: 100px;
+
+        }
+
+        .btn-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            width: 93px;
+            height: 34px;
+            background-color: rgb(128, 212, 128);
+            border-radius: 5px;
+
+        }
+
+        .posts {
+            border: solid 2px black;
+            border-radius: 10px;
+            height: 100px;
+            width: 1074px;
+            padding: 20px;
+        }
+        .sub-div{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="btn-div">
+            <button class="btn">Jobs World</button>
+        </div>
+        <div class="post-div">
+            <% posts.forEach((post)=>{ %>
+                <div class="posts">
+                    <div class="sub-div">
+                        
+                            <h3>Company:</h3>
+                      
+                            <h4>
+                                <%= post.company %>
+                            </h4>
+                        
+                    </div>
+                    <div class="sub-div">
+                        
+                            <h3>Position:</h3>
+                     
+                            <h4>
+                                <%= post.position %>
+                            </h4>
+                    
+                    </div>
+                    <div class="sub-div">
+                        <span>
+                            <h3>Description:</h3>
+                        </span>
+                        <h4>
+                            <%= post.description %>
+                        </h4>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>
